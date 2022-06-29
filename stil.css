@@ -1,18 +1,20 @@
+
 body {
-    background-color: rgb(20, 19, 33);
+    background-color: white;
 }
 
 h1 {
-    color: rgb(253, 66, 142);
+    color: Black;
 }
 
 p {
-    color: rgb(160, 241, 235);
+    color: Black;
 }
 
 .icons{
-    background-color: rgb(20, 19, 33);
+    background-color: white;
 }
+
 
 .sola-kaydir {
     float: left;
@@ -21,5 +23,33 @@ p {
 }
 
 .stats {
-    float:inline-end
+    float:inline-end;
 }
+
+.map{
+    float:right;
+}
+
+.mail {
+    color:rgb(0, 39, 53);
+}
+
+
+
+.waviy {
+    position: relative;
+  }
+.waviy span {
+position: relative;
+display: inline-block;
+font-size: 40px;
+color: black;
+text-transform: uppercase;
+animation: flip 2s infinite;
+animation-delay: calc(.3s * var(--i))
+}
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
