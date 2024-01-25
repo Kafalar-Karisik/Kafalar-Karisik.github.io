@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --sB: #333;
+    --sW: #fbfaf5;
+    /* Soft Black and White */
+  }
+}
+
+body {
+  background: var(--sW);
+}
+
+
+#name {
+  color: #fbfaf5;
+  font-feature-settings: "cv03" on;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 5%;
+}
+
+#detail {
+  color: #fbfaf5;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 10%;
+}

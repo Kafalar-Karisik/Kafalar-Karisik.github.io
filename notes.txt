@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Kafalar-Karisik</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <!--<body class="dark:bg-gray-900">-->
+
+  <body class="dark:bg-gray-900 text-gray-800 font-sans">
+    
+  </body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <title>Flip Card</title>
+        <style>
+            :root {
+                --sBlack: #181A18;
+                --sWhite: #FBFAF5;
+                --sGrey: #D2D2CF;
+                --fGrey: #404040;
+                --dHGrey: #484848;
+            }
+
+            body {
+                background-color: var(--sBlack);
+                overflow: hidden;
+            }
+            
+            #mobileMessage {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+            }
+
+            .card {
+                font-family: 'Roboto Slab', serif;
+                perspective: 1000px;
+                color: var(--sGrey);
+            }
+
+            .card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+
+            }
+
+            .card:hover .card-inner {
+                transform: rotateY(180deg);
+            }
+
+            .card-face,
+            .card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden;
+                /* Safari */
+                backface-visibility: hidden;
+            }
+
+            .card-face {
+                backface-visibility: hidden;
+                background-color: var(--fGrey);
+            }
+
+            .card-back {
+                transform: rotateY(180deg);
+                background-color: var(--dHGrey);
+            }
+        </style>
+    </head>
+
+    <body class="flex items-center justify-center h-screen">
+        <div id="mobileMessage" style="display: none;">
+            <p>Not available for Mobile Devices</p>
+          </div>
+
+        <div class="card w-3/5 h-3/5 rounded-md cursor-pointer">
+            <div class="card-inner w-full h-full transform">
+                <!-- Front of the card -->
+                <div class="card-face flex flex-col items-start rounded-md shadow-lg justify-normal p-32">
+                    <p class="text-xl font-bold">John Doe</p>
+                    <p class="text-sm">Front Side Info</p>
+                </div>
+
+                <!-- Back of the card -->
+                <div class="card-back flex flex-col items-start rounded-md shadow-lg justify-normal p-32">
+                    <p class="text-xl font-bold">Back Side Info</p>
+                    <p class="text-sm">Additional Details</p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script>
+        // Check if the user is on a mobile device
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+        // Display the message if the user is on a mobile device
+        if (isMobile) {
+          document.getElementById('mobileMessage').style.display = 'flex';
+        }
+      </script>
+</html>
