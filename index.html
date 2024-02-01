@@ -1,114 +1,149 @@
-<!--I'm sorry for not being not good in Front End 🥲-->
+<!--I'm sorry for not being good at Front End 🥲-->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Ömer R. Sak</title>
+    <style>
+      :root {
+        --sBlack: #181a18;
+        --sWhite: #fbfaf5;
+        --sGrey: #d2d2cf;
+        --fGrey: #404040;
+        --dHGrey: #484848;
+      }
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <title>Ömer R. Sak</title>
-        <style>
-            :root {
-                --sBlack: #181A18;
-                --sWhite: #FBFAF5;
-                --sGrey: #D2D2CF;
-                --fGrey: #404040;
-                --dHGrey: #484848;
-            }
+      body {
+        background-color: var(--sBlack);
+        overflow: hidden;
+      }
 
-            body {
-                background-color: var(--sBlack);
-                overflow: hidden;
-            }
-            
-            #mobileMessage {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 100vh;
-                background: rgba(0, 0, 0, 0.8);
-                color: #fff;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                font-size: 1.5rem;
-            }
+      #mobileMessage {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+      }
 
-            .card {
-                font-family: 'Roboto Slab', serif;
-                perspective: 1000px;
-                color: var(--sGrey);
-            }
+      .card {
+        font-family: "Roboto Slab", serif;
+        perspective: 1000px;
+        color: var(--sGrey);
+      }
 
-            .card-inner {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                text-align: center;
-                transition: transform 0.8s;
-                transform-style: preserve-3d;
+      .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
 
-            }
+      .card:hover .card-inner {
+        transform: rotateY(180deg);
+      }
 
-            .card:hover .card-inner {
-                transform: rotateY(180deg);
-            }
+      .card-face,
+      .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        /* Safari */
+        backface-visibility: hidden;
+      }
 
-            .card-face,
-            .card-back {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                -webkit-backface-visibility: hidden;
-                /* Safari */
-                backface-visibility: hidden;
-            }
+      .card-face {
+        backface-visibility: hidden;
+        background-color: var(--fGrey);
+      }
 
-            .card-face {
-                backface-visibility: hidden;
-                background-color: var(--fGrey);
-            }
+      .card-back {
+        transform: rotateY(180deg);
+        background-color: var(--dHGrey);
+      }
 
-            .card-back {
-                transform: rotateY(180deg);
-                background-color: var(--dHGrey);
-            }
-        </style>
-    </head>
+      .skill-icon {
+        margin-right: 0px;
+      }
+    </style>
+  </head>
 
-    <body class="flex items-center justify-center h-screen">
-        <div id="mobileMessage" style="display: none;">
-            <p>Not available for Mobile Devices</p>
-          </div>
+  <body class="flex items-center justify-center h-screen">
+    <div id="mobileMessage" style="display: none">
+      <p>Not available for Mobile Devices</p>
+    </div>
 
-        <div class="card w-3/5 h-3/5 rounded-md cursor-pointer">
-            <div class="card-inner w-full h-full transform">
-                <!-- Front of the card -->
-                <div class="card-face flex flex-col items-start rounded-md shadow-lg justify-normal p-32">
-                    <p class="text-xl font-bold">Ömer Rasim Sak</p>
-                    <p class="text-sm">Here will be my Beautiful Web Site</p>
-                </div>
-
-                <!-- Back of the card -->
-                <div class="card-back flex flex-col items-start rounded-md shadow-lg justify-normal p-32">
-                    <p class="text-xl font-bold">I'm working on it</p>
-                    <p class="text-sm">Backend is Better for Me .d</p>
-                </div>
-            </div>
+    <div class="card w-3/5 h-3/5 rounded-md cursor-pointer">
+      <div class="card-inner w-full h-full transform">
+        <!-- Front of the card -->
+        <div
+          class="card-face flex flex-col items-start rounded-md shadow-lg justify-normal p-32"
+        >
+          <p class="text-xl font-bold">Ömer Rasim Sak</p>
+          <p class="text-sm">
+            I was born in <strong>Turkey</strong> 🇹🇷, and I currently live in
+            <strong>Germany</strong> 🇩🇪. Ever since I was young, I've been
+            really interested in <strong>computers</strong>. I started learning
+            the basics of <strong>programming</strong> when I was in primary
+            school and began working on <strong>Arduino</strong>
+            <i class="fa-solid fa-microchip"></i> projects when I was in
+            secondary school. Later, I in <strong>Python</strong> and have been
+            working to get better at it. Now I have a strong interest in
+            <strong>Backend Developing</strong> and
+            <strong>Penetration Testing</strong>. Currently, I'm learning many
+            new things like VUE.js
+            <span class="skill-icon"><i class="fab fa-vuejs"></i></span>, Django
+            <span class="skill-icon"><i class="fab fa-python"></i></span>, and
+            sometimes enjoy designing simple 3D models
+            <span class="skill-icon"><i class="fas fa-cube"></i></span> as a
+            hobby.
+          </p>
         </div>
 
-    </body>
-    <script>
-        // Check if the user is on a mobile device
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-      
-        // Display the message if the user is on a mobile device
-        if (isMobile) {
-          document.getElementById('mobileMessage').style.display = 'flex';
-        }
-      </script>
+        <!-- Back of the card -->
+        <div
+          class="card-back flex flex-col items-start rounded-md shadow-lg justify-normal p-32"
+        >
+          <p class="text-xl font-bold">I'm working on it</p>
+          <p class="text-sm">Backend is better for Me :D</p>
+
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // Check if the user is on a mobile device
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+
+    // Display the message if the user is on a mobile device
+    if (isMobile) {
+      document.getElementById("mobileMessage").style.display = "flex";
+    }
+  </script>
 </html>
