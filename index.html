@@ -1,4 +1,3 @@
-<!--I'm sorry for not being good at Front End 🥲-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <title>Ömer R. Sak</title>
-
+    <link rel="logo" href="logo.png" />
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Kafalar Karışık" />
     <meta
@@ -33,134 +32,72 @@
     <meta property="og:locale" content="de_DE" />
     <meta property="og:locale:alternate" content="tr_TR" />
     <meta property="og:site_name" content="MyPortfolio" />
-
-    <style>
-      :root {
-        --sBlack: #181a18;
-        --sWhite: #fbfaf5;
-        --sGrey: #d2d2cf;
-        --fGrey: #404040;
-        --dHGrey: #484848;
-      }
-
-      body {
-        background-color: var(--sBlack);
-        overflow: hidden;
-      }
-
-      #mobileMessage {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.8);
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-      }
-
-      .card {
-        font-family: "Roboto Slab", serif;
-        perspective: 1000px;
-        color: var(--sGrey);
-      }
-
-      .card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform 0.8s;
-        transform-style: preserve-3d;
-      }
-
-      .card:hover .card-inner {
-        transform: rotateY(180deg);
-      }
-
-      .card-face,
-      .card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden;
-        /* Safari */
-        backface-visibility: hidden;
-      }
-
-      .card-face {
-        backface-visibility: hidden;
-        background-color: var(--fGrey);
-      }
-
-      .card-back {
-        transform: rotateY(180deg);
-        background-color: var(--dHGrey);
-      }
-
-      .skill-icon {
-        margin-right: 0px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
-
-  <body class="flex items-center justify-center h-screen">
-    <div id="mobileMessage" style="display: none">
-      <p>Not available for Mobile Devices</p>
-    </div>
-
-    <div class="card w-3/5 h-3/5 rounded-md cursor-pointer">
-      <div class="card-inner w-full h-full transform">
-        <!-- Front of the card -->
-        <div
-          class="card-face flex flex-col items-start rounded-md shadow-lg justify-normal p-32"
-        >
-          <p class="text-xl font-bold">Ömer Rasim</p>
-          <p class="text-sm">
-            I was born in <strong>Turkey</strong> 🇹🇷, and I currently live in
-            <strong>Germany</strong> 🇩🇪. Ever since I was young, I've been
-            really interested in <strong>computers</strong>. I started learning
-            the basics of <strong>programming</strong> when I was in primary
-            school and began working on <strong>Arduino</strong>
-            <i class="fa-solid fa-microchip"></i> projects when I was in
-            secondary school. Later, I delved into <strong>Python</strong> and
-            have been working to get better at it. Now I have a strong interest
-            in <strong>Backend Developing</strong> and
-            <strong>Penetration Testing</strong>. Currently, I'm learning many
-            new things like VUE.js
-            <span class="skill-icon"><i class="fab fa-vuejs"></i></span>, Django
-            <span class="skill-icon"><i class="fab fa-python"></i></span>, and
-            sometimes enjoy designing simple 3D models
-            <span class="skill-icon"><i class="fas fa-cube"></i></span> as a
-            hobby.
-          </p>
+  <body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="card">
+      <div class="card-inner">
+        <!-- Front side of the card -->
+        <div class="card-front bg-white shadow-md p-4 rounded-lg">
+          <h1 class="text-2xl font-bold mb-2">Ömer Rasim</h1>
+          <p class="text-gray-600">Kafalar Karışık</p>
+          <div class="flex items-center mt-2">
+            <i class="brand-icon fas fa-envelope text-gray-600"></i>
+            <p class="text-gray-600">orsmes6145@gmail.com</p>
+          </div>
+          <div class="flex items-center mt-2">
+            <i class="brand-icon fab fa-github text-gray-600"></i>
+            <a
+              href="https://github.com/Kafalar-Karisk"
+              class="text-gray-600"
+              target="_blank"
+              >Kafalar-Karisik</a
+            >
+          </div>
+          <div class="biography mt-4 text-gray-600">
+            <p>
+              I was born in <strong>Turkey</strong> 🇹🇷, and I currently live in
+              <strong>Germany</strong> 🇩🇪. Ever since I was young, I've been
+              really interested in <strong>computers</strong>. I started
+              learning the basics of <strong>programming</strong> when I was in
+              primary school and began working on
+              <span
+                class="hover-icon"
+                onmouseover="showIcon(this, 'pharetra risus')"
+                onmouseout="hideIcon(this)"
+              >
+                <span class="term"><strong>Arduino</strong></span>
+                <span class="icon"><i class="fas fa-microchip"></i> </span>
+              </span>
+              projects when I was in secondary school. Later, I started learning
+              <strong>Python</strong> and have been working to get better at it.
+              Now I have a strong interest in
+              <strong>Backend Developing</strong> and
+              <strong>Penetration Testing</strong>. Currently, I'm learning many
+              new things like <strong>Django</strong> and sometimes enjoy
+              designing and printing simple <strong>3D models</strong> as a
+              hobby.
+            </p>
+          </div>
         </div>
-
-        <!-- Back of the card -->
-        <div
-          class="card-back flex flex-col items-start rounded-md shadow-lg justify-normal p-32"
-        >
-          <p class="text-xl font-bold">I'm working on it</p>
-          <p class="text-sm">Backend is better for Me :D</p>
-
+        <!-- Back side of the card -->
+        <div class="card-back bg-gray-800 shadow-md p-4 rounded-lg">
+          <h1 class="text-2xl font-bold mb-2">Tech Stack</h1>
+          <ul class="text-white">
+            <li>Will be Updated</li>
+            <!-- Add more tech stack items here -->
+          </ul>
         </div>
       </div>
     </div>
-  </body>
-  <script>
-    // Check if the user is on a mobile device
-    const isMobile =
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      );
+    <script>
+      function showIcon(element, term) {
+        element.querySelector(".icon").style.display = "inline-block";
+      }
 
-    // Display the message if the user is on a mobile device
-    if (isMobile) {
-      document.getElementById("mobileMessage").style.display = "flex";
-    }
-  </script>
+      function hideIcon(element) {
+        element.querySelector(".icon").style.display = "none";
+      }
+    </script>
+  </body>
 </html>
