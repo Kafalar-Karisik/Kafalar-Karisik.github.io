@@ -1,9 +1,70 @@
 .nav-link.active {
-  color: var(--bs-nav-tabs-link-active-color)!important;
+  color: var(--bs-nav-tabs-link-active-color) !important;
   font-size: 20px;
 }
 
 .nav-link {
-  color: var(--bs-gray-800)!important;
+  color: var(--bs-gray-800) !important;
 }
 
+
+body {
+  background-color: #fbfaf5;
+}
+
+main {
+  width: 50%;
+}
+
+.master {
+  display: flex;
+  font-family: 'Roboto Slab', serif;
+  padding-left: 58px;
+  padding-bottom: 66px;
+  padding-right: 58px;
+  padding-top: 66px;
+}
+
+.head {
+  display:block;position:sticky;top:0;padding-right:39px;padding-top:30px;padding-bottom:30px;padding-left:20px;height:80vh;width:50%;
+}
+
+.navi {
+  border-style: none;width: inherit;
+}
+
+.navi .nav-item {
+  border-style:none;display:flex;width:inherit;
+}
+
+.icon {
+  padding: 5px;
+}
+
+.icon i{
+  font-size: 35px;
+  color: var(--bs-body-color);
+}
+
+main .list-group {
+  border-style:none;
+  padding-bottom:50px;
+}
+
+.list-group:not(#projects) .list-group-item {
+  display:flex;
+}
+
+.list-group-item {
+  border-style:none;
+}
+
+.date {
+  width:33%;
+  min-width:33%; /* not sure */
+}
+
+.badge {
+  margin-right:2px;
+  margin-left:2px;
+}
