@@ -5,3 +5,4 @@
 - More Colors
 - Second Font
 - Better Background
+- Card hover animation
