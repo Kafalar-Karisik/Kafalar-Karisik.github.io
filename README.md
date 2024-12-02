@@ -2,6 +2,7 @@
 
 ## To-Do
 
+- Mobile Responsive Design
 - More Colors
 - Second Font
 - Better Background
