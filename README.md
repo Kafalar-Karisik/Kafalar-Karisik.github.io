@@ -5,3 +5,5 @@
 - More Colors
 - Second Font
 - Better Background
+- Card Hover Animation
+- Mobile Responsive Design
