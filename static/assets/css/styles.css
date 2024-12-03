@@ -26,15 +26,26 @@ main {
 }
 
 .head {
-  display:block;position:sticky;top:0;padding-right:39px;padding-top:30px;padding-bottom:30px;padding-left:20px;height:80vh;width:50%;
+  display:block;
+  position:sticky;
+  top:0;
+  padding-right:39px;
+  padding-top:30px;
+  padding-bottom:30px;
+  padding-left:20px;
+  height:80vh;
+  width:50%;
 }
 
 .navi {
-  border-style: none;width: inherit;
+  border-style: none;
+  width: inherit;
 }
 
 .navi .nav-item {
-  border-style:none;display:flex;width:inherit;
+  border-style:none;
+  display:flex;
+  width:inherit;
 }
 
 .icon {
